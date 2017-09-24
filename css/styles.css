@@ -12,10 +12,13 @@ html, body {
   height: 100%; }
 
 body {
-  background-color: black; }
+  background-color: #080808; }
 
 .grid {
   color: white; }
+
+.shadow-text {
+  text-shadow: 0 10px 41px white; }
 
 #h-404 {
   font-size: 8em;

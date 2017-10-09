@@ -1,9 +1,12 @@
+//jshint esversion: 6
+
 $(function(){
 	console.log('Hello world');
 
 	setInterval(animateHeader, 2000);
 
 	animateHeader();
+	animateElse();
 
 	function animateHeader(){
 		let base = 10;
@@ -36,6 +39,31 @@ $(function(){
 			scaleX: 0.75
 		},{
 			duration: points[3]
+		});
+	}
+
+	function animateElse(){
+		let delay = 0;
+
+		$('#h-404 span').each(function(i){
+			$(this).velocity({
+				opacity: 1
+			}, {
+				duration: 1000,
+				delay
+			});
+
+			delay += 1000;
+
+		});
+
+		$('#subtext').velocity({
+			opacity: 1,
+			translateY: '15px'
+		},
+		{
+			duration: 500,
+			delay
 		});
 	}
 });
